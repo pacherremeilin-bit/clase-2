@@ -21,6 +21,6 @@ def listar_servicios():
 
 @router.post("/agregar")
 def agregar_servicio(servicio: ServicioIn):
-    nuevo = servicio.dict()
+    nuevo = servicio.model_dump()
     servicios_db.append(nuevo)
     return {"ok": True, "servicio": nuevo}
