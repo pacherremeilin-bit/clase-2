@@ -36,6 +36,7 @@ def listar_mascotas(correo: str):
     mascotas = [m for m in mascotas_db if m['correo'].lower() == correo.lower()]
     return {'mascotas': mascotas}
 
+# solucion
 
 @app.get('/reporte/{correo}')
 def reporte_correo(correo: str):
